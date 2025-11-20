@@ -50,9 +50,7 @@ fun SiswaApp(
             composable(route = Navigasi.Detail.name) {
                 TampilSiswa(
                     statusUiSiswa = uiState.value,
-                    onBackButtonClicked = { cancelAndBackToFormulir(navController)
-
-                    }
+                    onBackButtonClicked = { cancelAndBackToFormulir(navController) }
                 )
             }
 
@@ -60,3 +58,8 @@ fun SiswaApp(
     }
 }
 
+private fun cancelAndBackToFormulir(
+    navController: NavHostController
+){
+    navController.popBackStack(Navigasi.Formulir.name, inclusive = false)
+}
