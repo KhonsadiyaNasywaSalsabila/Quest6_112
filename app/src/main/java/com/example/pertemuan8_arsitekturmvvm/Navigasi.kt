@@ -22,3 +22,16 @@ enum class Navigasi {
     Detail
 }
 
+@Composable
+fun SiswaApp(
+    navController: NavHostController = rememberNavController(),
+    viewModel: SiswaViewModel = viewModel(),
+    modifier: Modifier
+){
+    Scaffold { isiRuang->
+        val uiState = viewModel.statusUI.collectAsState()
+
+
+    }
+}
+
